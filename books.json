@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Naruto",
+        "author": "Masashi Kishimoto",
+        "genre": "Manga",
+        "description": "Before Naruto's birth, a great demon fox had attacked the Hidden Leaf Village. A man known as the 4th Hokage sealed the demon inside the newly born Naruto, causing him to unknowingly grow up detested by his fellow villagers. Despite his lack of talent in many areas of ninjutsu, Naruto strives for only one goal: to gain the title of Hokage, the strongest ninja in his village. Desiring the respect he never received, Naruto works towards his dream with fellow friends Sasuke and Sakura and mentor Kakashi as they go through many trials and battles that come with being a ninja.",
+        "cover": "https://files.catbox.moe/2ivf0x.jpg",
+        "download_urls": [
+            { "label": "Volume 1", "url": "https://example.com/naruto_vol1.pdf" },
+            { "label": "Volume 2", "url": "https://example.com/naruto_vol2.pdf" },
+            { "label": "Volume 3", "url": "https://example.com/naruto_vol3.pdf" }
+        ]
+    },
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "genre": "Science Fiction",
+        "description": "A sci-fi epic of power and destiny.",
+        "cover": "https://via.placeholder.com/150",
+        "download_urls": [
+            { "label": "Book", "url": "https://example.com/gatsby.pdf" }
+        ]
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Novel",
+        "description": "A tale of wealth, love, and the American Dream.",
+        "cover": "https://via.placeholder.com/150",
+        "download_urls": [
+            { "label": "Book", "url": "https://example.com/gatsby.pdf" }
+        ]
+    },
+    {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "genre": "Philosophical",
+        "description": "Reflections on stoic wisdom and duty.",
+        "cover": "https://via.placeholder.com/150",
+        "download_urls": [
+            { "label": "Book", "url": "https://example.com/gatsby.pdf" }
+        ]
+    },
+    {
+        "title": "The 7 Habits of Highly Effective People",
+        "author": "Stephen R. Covey",
+        "genre": "Self-Help",
+        "description": "Timeless principles for success.",
+        "cover": "https://via.placeholder.com/150",
+        "download_urls": [
+            { "label": "Book", "url": "https://example.com/gatsby.pdf" }
+        ]
+    }
+]

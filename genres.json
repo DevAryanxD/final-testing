@@ -1,0 +1,173 @@
+[
+    {
+        "genre": "Manga",
+        "header": {
+            "title": "Manga Collection",
+            "description": "Explore the best of Manga with thrilling stories and epic adventures."
+        },
+        "trending": [
+            { "title": "Naruto", "author": "Masashi Kishimoto", "description": "A young ninja’s journey to become the strongest.", "cover": "https://files.catbox.moe/2ivf0x.jpg" },
+            { "title": "Attack on Titan", "author": "Hajime Isayama", "description": "Humanity’s battle against colossal titans.", "cover": "https://files.catbox.moe/vcgnjl.jpg" },
+            { "title": "One Piece", "author": "Eiichiro Oda", "description": "A pirate’s quest for the ultimate treasure.", "cover": "https://files.catbox.moe/hg2ef5.jpg" },
+            { "title": "Death Note", "author": "Tsugumi Ohba", "description": "A genius battles with a deadly notebook.", "cover": "https://files.catbox.moe/j5vb0h.jpg" },
+            { "title": "Fullmetal Alchemist", "author": "Hiromu Arakawa", "description": "Brothers seek the philosopher’s stone.", "cover": "https://files.catbox.moe/0mye3w.jpg" },
+            { "title": "Jujutsu Kaisen", "author": "Gege Akutami", "description": "A teen battles curses with dark power.", "cover": "https://files.catbox.moe/qaewtu.jpg" },
+            { "title": "Demon Slayer", "author": "Koyoharu Gotouge", "description": "A boy fights demons to save his sister.", "cover": "https://files.catbox.moe/qwj9k8.jpg" }
+        ],
+        "most_read": [
+            { "title": "Dragon Ball", "author": "Akira Toriyama", "description": "A warrior’s epic quest for power.", "cover": "https://files.catbox.moe/dit31q.jpg" },
+            { "title": "Jujutsu Kaisen", "author": "Gege Akutami", "description": "A teen battles curses with dark power.", "cover": "https://files.catbox.moe/qaewtu.jpg" },
+            { "title": "Demon Slayer", "author": "Koyoharu Gotouge", "description": "A boy fights demons to save his sister.", "cover": "https://files.catbox.moe/qwj9k8.jpg" },
+            { "title": "My Hero Academia", "author": "Kohei Horikoshi", "description": "A quirkless boy rises to heroism.", "cover": "https://files.catbox.moe/luuwbm.jpg" },
+            { "title": "Naruto", "author": "Masashi Kishimoto", "description": "A young ninja’s journey to become the strongest.", "cover": "https://files.catbox.moe/2ivf0x.jpg" },
+            { "title": "One Piece", "author": "Eiichiro Oda", "description": "A pirate’s quest for the ultimate treasure.", "cover": "https://files.catbox.moe/hg2ef5.jpg" },
+            { "title": "Attack on Titan", "author": "Hajime Isayama", "description": "Humanity’s battle against colossal titans.", "cover": "https://files.catbox.moe/vcgnjl.jpg" }
+        ],
+        "new_releases": [
+            { "title": "Jujutsu Kaisen Vol 25", "author": "Gege Akutami", "description": "The latest chapter in the curse-filled saga.", "cover": "https://files.catbox.moe/jujutsukaisennew.jpg" },
+            { "title": "Demon Slayer: New Arc", "author": "Koyoharu Gotouge", "description": "A new journey begins for Tanjiro.", "cover": "https://files.catbox.moe/demonslayernew.jpg" },
+            { "title": "One Piece Vol 108", "author": "Eiichiro Oda", "description": "Luffy’s adventure continues in the final saga.", "cover": "https://files.catbox.moe/onepiecenew.jpg" },
+            { "title": "Naruto: New Gen", "author": "Masashi Kishimoto", "description": "Next generation of ninjas rises.", "cover": "https://files.catbox.moe/narutonew.jpg" },
+            { "title": "Attack on Titan: Epilogue", "author": "Hajime Isayama", "description": "A final chapter to the titan saga.", "cover": "https://files.catbox.moe/aotnew.jpg" },
+            { "title": "My Hero Academia Vol 40", "author": "Kohei Horikoshi", "description": "The final battle approaches.", "cover": "https://files.catbox.moe/mhanew.jpg" },
+            { "title": "Dragon Ball: New Saga", "author": "Akira Toriyama", "description": "A new adventure for Goku.", "cover": "https://files.catbox.moe/dragonballnew.jpg" }
+        ],
+        "hidden_gems": [
+            { "title": "Vagabond", "author": "Takehiko Inoue", "description": "A samurai’s journey of self-discovery.", "cover": "https://files.catbox.moe/vagabond.jpg" },
+            { "title": "Berserk", "author": "Kentaro Miura", "description": "A dark tale of vengeance and fate.", "cover": "https://files.catbox.moe/berserk.jpg" },
+            { "title": "Gantz", "author": "Hiroya Oku", "description": "A deadly game of survival.", "cover": "https://files.catbox.moe/gantz.jpg" },
+            { "title": "20th Century Boys", "author": "Naoki Urasawa", "description": "A thrilling mystery across generations.", "cover": "https://files.catbox.moe/20thcenturyboys.jpg" },
+            { "title": "Pluto", "author": "Naoki Urasawa", "description": "A sci-fi mystery with robots and humans.", "cover": "https://files.catbox.moe/pluto.jpg" },
+            { "title": "Monster", "author": "Naoki Urasawa", "description": "A doctor’s dark journey.", "cover": "https://files.catbox.moe/monster.jpg" },
+            { "title": "Goodnight Punpun", "author": "Inio Asano", "description": "A coming-of-age tale with a dark twist.", "cover": "https://files.catbox.moe/punpun.jpg" }
+        ],
+        "classics": [
+            { "title": "Lone Wolf and Cub", "author": "Kazuo Koike", "description": "A samurai and his son on a path of revenge.", "cover": "https://files.catbox.moe/lonewolf.jpg" },
+            { "title": "Akira", "author": "Katsuhiro Otomo", "description": "A dystopian sci-fi masterpiece.", "cover": "https://files.catbox.moe/akira.jpg" },
+            { "title": "Ghost in the Shell", "author": "Masamune Shirow", "description": "A cyberpunk classic about identity.", "cover": "https://files.catbox.moe/ghostintheshell.jpg" },
+            { "title": "Nausicaä of the Valley of the Wind", "author": "Hayao Miyazaki", "description": "A post-apocalyptic tale of nature.", "cover": "https://files.catbox.moe/nausicaa.jpg" },
+            { "title": "Astro Boy", "author": "Osamu Tezuka", "description": "The origins of modern manga.", "cover": "https://files.catbox.moe/astro.jpg" },
+            { "title": "Sailor Moon", "author": "Naoko Takeuchi", "description": "A magical girl classic.", "cover": "https://files.catbox.moe/sailormoon.jpg" },
+            { "title": "Dragon Ball", "author": "Akira Toriyama", "description": "A warrior’s epic quest for power.", "cover": "https://files.catbox.moe/dit31q.jpg" }
+        ],
+        "reviews": [
+            { "text": "This genre has some of the best stories I’ve ever read!", "author": "Priya", "rating": "4.8/5" },
+            { "text": "I discovered so many amazing books here!", "author": "Arjun", "rating": "4.5/5" },
+            { "text": "The collection is top-notch, highly recommend!", "author": "Neha", "rating": "4.7/5" }
+        ]
+    },
+    {
+        "genre": "Classics",
+        "header": {
+            "title": "Classics Collection",
+            "description": "Dive into timeless classics that shaped literature."
+        },
+        "trending": [
+            { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "description": "A tale of wealth, love, and the American Dream.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gatsby_1925_First_Edition_Cover.jpg/800px-Gatsby_1925_First_Edition_Cover.jpg" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Pride and Prejudice", "author": "Jane Austen", "description": "A classic romance with wit and commentary.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/PrideAndPrejudiceTitlePage.jpg/800px-PrideAndPrejudiceTitlePage.jpg" },
+            { "title": "To Kill a Mockingbird", "author": "Harper Lee", "description": "A powerful story of justice and morality.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/800px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" },
+            { "title": "Brave New World", "author": "Aldous Huxley", "description": "A dystopian vision of a controlled society.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "The Catcher in the Rye", "author": "J.D. Salinger", "description": "A tale of teenage rebellion and alienation.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Catcher_in_the_Rye_first_edition_cover.jpg/800px-Catcher_in_the_Rye_first_edition_cover.jpg" },
+            { "title": "The Outsiders", "author": "S.E. Hinton", "description": "A story of loyalty and rivalry among teens.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/The_Outsiders_book.jpg/800px-The_Outsiders_book.jpg" }
+        ],
+        "most_read": [
+            { "title": "Pride and Prejudice", "author": "Jane Austen", "description": "A classic romance with wit and commentary.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/PrideAndPrejudiceTitlePage.jpg/800px-PrideAndPrejudiceTitlePage.jpg" },
+            { "title": "To Kill a Mockingbird", "author": "Harper Lee", "description": "A powerful story of justice and morality.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/800px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "description": "A tale of wealth, love, and the American Dream.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gatsby_1925_First_Edition_Cover.jpg/800px-Gatsby_1925_First_Edition_Cover.jpg" },
+            { "title": "Jane Eyre", "author": "Charlotte Brontë", "description": "A tale of love, independence, and resilience.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jane_Eyre_title_page.jpg/800px-Jane_Eyre_title_page.jpg" },
+            { "title": "Wuthering Heights", "author": "Emily Brontë", "description": "A dark tale of love and revenge.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Wuthering_Heights_title_page_1847.jpg/800px-Wuthering_Heights_title_page_1847.jpg" },
+            { "title": "Moby-Dick", "author": "Herman Melville", "description": "A whaling captain’s obsessive quest.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Moby-Dick_%281851%29_title_page.jpg/800px-Moby-Dick_%281851%29_title_page.jpg" }
+        ],
+        "new_releases": [
+            { "title": "The Great Gatsby: Anniversary Ed.", "author": "F. Scott Fitzgerald", "description": "A special edition of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gatsby_1925_First_Edition_Cover.jpg/800px-Gatsby_1925_First_Edition_Cover.jpg" },
+            { "title": "1984: Special Edition", "author": "George Orwell", "description": "A new take on the dystopian classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Pride and Prejudice: Illustrated", "author": "Jane Austen", "description": "A beautifully illustrated edition.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/PrideAndPrejudiceTitlePage.jpg/800px-PrideAndPrejudiceTitlePage.jpg" },
+            { "title": "To Kill a Mockingbird: Special Ed.", "author": "Harper Lee", "description": "A collector’s edition of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/800px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" },
+            { "title": "Brave New World: Reprint", "author": "Aldous Huxley", "description": "A modern reprint of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "The Catcher in the Rye: New Ed.", "author": "J.D. Salinger", "description": "A new edition of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Catcher_in_the_Rye_first_edition_cover.jpg/800px-Catcher_in_the_Rye_first_edition_cover.jpg" },
+            { "title": "The Outsiders: Anniversary Ed.", "author": "S.E. Hinton", "description": "A special anniversary edition.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/The_Outsiders_book.jpg/800px-The_Outsiders_book.jpg" }
+        ],
+        "hidden_gems": [
+            { "title": "The Scarlet Letter", "author": "Nathaniel Hawthorne", "description": "A tale of sin and redemption.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Scarlet_Letter_First_Edition.jpg/800px-Scarlet_Letter_First_Edition.jpg" },
+            { "title": "A Tale of Two Cities", "author": "Charles Dickens", "description": "A story of love and sacrifice.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_Tale_of_Two_Cities_First_Edition.jpg/800px-A_Tale_of_Two_Cities_First_Edition.jpg" },
+            { "title": "Great Expectations", "author": "Charles Dickens", "description": "A boy’s journey to manhood.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Great_Expectations_First_Edition.jpg/800px-Great_Expectations_First_Edition.jpg" },
+            { "title": "The Count of Monte Cristo", "author": "Alexandre Dumas", "description": "A tale of revenge and redemption.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Count_of_Monte_Cristo_First_Edition.jpg/800px-Count_of_Monte_Cristo_First_Edition.jpg" },
+            { "title": "Les Misérables", "author": "Victor Hugo", "description": "A story of justice and redemption.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Les_Mis%C3%A9rables_First_Edition.jpg/800px-Les_Mis%C3%A9rables_First_Edition.jpg" },
+            { "title": "Dracula", "author": "Bram Stoker", "description": "A gothic horror classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Dracula_First_Edition.jpg/800px-Dracula_First_Edition.jpg" },
+            { "title": "Frankenstein", "author": "Mary Shelley", "description": "A tale of creation and consequence.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Frankenstein_First_Edition.jpg/800px-Frankenstein_First_Edition.jpg" }
+        ],
+        "classics": [
+            { "title": "Pride and Prejudice", "author": "Jane Austen", "description": "A classic romance with wit and commentary.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/PrideAndPrejudiceTitlePage.jpg/800px-PrideAndPrejudiceTitlePage.jpg" },
+            { "title": "To Kill a Mockingbird", "author": "Harper Lee", "description": "A powerful story of justice and morality.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/800px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "description": "A tale of wealth, love, and the American Dream.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gatsby_1925_First_Edition_Cover.jpg/800px-Gatsby_1925_First_Edition_Cover.jpg" },
+            { "title": "Jane Eyre", "author": "Charlotte Brontë", "description": "A tale of love, independence, and resilience.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jane_Eyre_title_page.jpg/800px-Jane_Eyre_title_page.jpg" },
+            { "title": "Wuthering Heights", "author": "Emily Brontë", "description": "A dark tale of love and revenge.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Wuthering_Heights_title_page_1847.jpg/800px-Wuthering_Heights_title_page_1847.jpg" },
+            { "title": "Moby-Dick", "author": "Herman Melville", "description": "A whaling captain’s obsessive quest.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Moby-Dick_%281851%29_title_page.jpg/800px-Moby-Dick_%281851%29_title_page.jpg" }
+        ],
+        "reviews": [
+            { "text": "Timeless stories that never get old!", "author": "Ananya", "rating": "4.9/5" },
+            { "text": "Every book here is a masterpiece!", "author": "Vikram", "rating": "4.6/5" },
+            { "text": "A must-visit for classic literature lovers!", "author": "Sneha", "rating": "4.8/5" }
+        ]
+    },
+    {
+        "genre": "Sci-Fi",
+        "header": {
+            "title": "Sci-Fi Collection",
+            "description": "Explore futuristic worlds and mind-bending adventures."
+        },
+        "trending": [
+            { "title": "Dune", "author": "Frank Herbert", "description": "A sci-fi epic of power and destiny.", "cover": "https://files.catbox.moe/gi5mfp.jpg" },
+            { "title": "The Hobbit", "author": "J.R.R. Tolkien", "description": "An epic adventure with dwarves and wizards.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Hobbit_cover.JPG/800px-Hobbit_cover.JPG" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Brave New World", "author": "Aldous Huxley", "description": "A dystopian vision of a controlled society.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "Foundation", "author": "Isaac Asimov", "description": "A saga of the fall and rise of civilizations.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Foundation_-_First_Edition.jpg/800px-Foundation_-_First_Edition.jpg" },
+            { "title": "Neuromancer", "author": "William Gibson", "description": "A cyberpunk classic.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Neuromancer_%28Book%29.jpg/800px-Neuromancer_%28Book%29.jpg" },
+            { "title": "The Left Hand of Darkness", "author": "Ursula K. Le Guin", "description": "A tale of diplomacy on a frozen planet.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/The_Left_Hand_of_Darkness_%28Book_Cover%29.jpg/800px-The_Left_Hand_of_Darkness_%28Book_Cover%29.jpg" }
+        ],
+        "most_read": [
+            { "title": "Dune", "author": "Frank Herbert", "description": "A sci-fi epic of power and destiny.", "cover": "https://files.catbox.moe/gi5mfp.jpg" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Brave New World", "author": "Aldous Huxley", "description": "A dystopian vision of a controlled society.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "Foundation", "author": "Isaac Asimov", "description": "A saga of the fall and rise of civilizations.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Foundation_-_First_Edition.jpg/800px-Foundation_-_First_Edition.jpg" },
+            { "title": "The Hobbit", "author": "J.R.R. Tolkien", "description": "An epic adventure with dwarves and wizards.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Hobbit_cover.JPG/800px-Hobbit_cover.JPG" },
+            { "title": "Ender’s Game", "author": "Orson Scott Card", "description": "A boy’s battle against an alien threat.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Ender%27s_Game_%28Book_Cover%29.jpg/800px-Ender%27s_Game_%28Book_Cover%29.jpg" },
+            { "title": "Snow Crash", "author": "Neal Stephenson", "description": "A cyberpunk adventure.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Snow_Crash_%28Book_Cover%29.jpg/800px-Snow_Crash_%28Book_Cover%29.jpg" }
+        ],
+        "new_releases": [
+            { "title": "Dune: Messiah Reprint", "author": "Frank Herbert", "description": "The next chapter in the Dune saga.", "cover": "https://files.catbox.moe/gi5mfp.jpg" },
+            { "title": "1984: Special Edition", "author": "George Orwell", "description": "A new take on the dystopian classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Brave New World: Reprint", "author": "Aldous Huxley", "description": "A modern reprint of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "Foundation: Anniversary Ed.", "author": "Isaac Asimov", "description": "A special edition of the classic.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Foundation_-_First_Edition.jpg/800px-Foundation_-_First_Edition.jpg" },
+            { "title": "The Hobbit: Illustrated", "author": "J.R.R. Tolkien", "description": "A beautifully illustrated edition.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Hobbit_cover.JPG/800px-Hobbit_cover.JPG" },
+            { "title": "Hyperion: New Ed.", "author": "Dan Simmons", "description": "A new edition of the sci-fi epic.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Hyperion_%28Book_Cover%29.jpg/800px-Hyperion_%28Book_Cover%29.jpg" },
+            { "title": "The Three-Body Problem: Reprint", "author": "Cixin Liu", "description": "A modern sci-fi classic.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/The_Three-Body_Problem_%28Book_Cover%29.jpg/800px-The_Three-Body_Problem_%28Book_Cover%29.jpg" }
+        ],
+        "hidden_gems": [
+            { "title": "The Dispossessed", "author": "Ursula K. Le Guin", "description": "A tale of anarchy and utopia.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/The_Dispossessed_%28Book_Cover%29.jpg/800px-The_Dispossessed_%28Book_Cover%29.jpg" },
+            { "title": "Roadside Picnic", "author": "Arkady and Boris Strugatsky", "description": "A mysterious alien visitation.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Roadside_Picnic_%28Book_Cover%29.jpg/800px-Roadside_Picnic_%28Book_Cover%29.jpg" },
+            { "title": "A Canticle for Leibowitz", "author": "Walter M. Miller Jr.", "description": "A post-apocalyptic monastery tale.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/A_Canticle_for_Leibowitz_%28Book_Cover%29.jpg/800px-A_Canticle_for_Leibowitz_%28Book_Cover%29.jpg" },
+            { "title": "The Forever War", "author": "Joe Haldeman", "description": "A soldier’s endless war.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/The_Forever_War_%28Book_Cover%29.jpg/800px-The_Forever_War_%28Book_Cover%29.jpg" },
+            { "title": "Flowers for Algernon", "author": "Daniel Keyes", "description": "A tale of intelligence and humanity.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Flowers_for_Algernon_%28Book_Cover%29.jpg/800px-Flowers_for_Algernon_%28Book_Cover%29.jpg" },
+            { "title": "The Demolished Man", "author": "Alfred Bester", "description": "A telepathic murder mystery.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/The_Demolished_Man_%28Book_Cover%29.jpg/800px-The_Demolished_Man_%28Book_Cover%29.jpg" },
+            { "title": "The Stars My Destination", "author": "Alfred Bester", "description": "A tale of revenge in a futuristic world.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/The_Stars_My_Destination_%28Book_Cover%29.jpg/800px-The_Stars_My_Destination_%28Book_Cover%29.jpg" }
+        ],
+        "classics": [
+            { "title": "Dune", "author": "Frank Herbert", "description": "A sci-fi epic of power and destiny.", "cover": "https://files.catbox.moe/gi5mfp.jpg" },
+            { "title": "1984", "author": "George Orwell", "description": "A dystopian nightmare of surveillance.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nineteen_Eighty-Four_First_Edition.jpg/800px-Nineteen_Eighty-Four_First_Edition.jpg" },
+            { "title": "Brave New World", "author": "Aldous Huxley", "description": "A dystopian vision of a controlled society.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BraveNewWorld_FirstEdition.jpg/800px-BraveNewWorld_FirstEdition.jpg" },
+            { "title": "Foundation", "author": "Isaac Asimov", "description": "A saga of the fall and rise of civilizations.", "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Foundation_-_First_Edition.jpg/800px-Foundation_-_First_Edition.jpg" },
+            { "title": "The War of the Worlds", "author": "H.G. Wells", "description": "An alien invasion classic.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/War_of_the_Worlds_First_Edition.jpg/800px-War_of_the_Worlds_First_Edition.jpg" },
+            { "title": "The Time Machine", "author": "H.G. Wells", "description": "A journey through time.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/The_Time_Machine_First_Edition.jpg/800px-The_Time_Machine_First_Edition.jpg" },
+            { "title": "Twenty Thousand Leagues Under the Sea", "author": "Jules Verne", "description": "An underwater adventure.", "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Twenty_Thousand_Leagues_First_Edition.jpg/800px-Twenty_Thousand_Leagues_First_Edition.jpg" }
+        ],
+        "reviews": [
+            { "text": "Mind-blowing sci-fi adventures!", "author": "Rohan", "rating": "4.7/5" },
+            { "text": "The best sci-fi collection I’ve seen!", "author": "Aisha", "rating": "4.8/5" },
+            { "text": "Futuristic worlds that keep you hooked!", "author": "Karan", "rating": "4.6/5" }
+        ]
+    }
+]

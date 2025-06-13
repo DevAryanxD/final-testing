@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7islands Books Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8, 0 0 20px #7209b7;
+        }
+        .nav-link {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+        }
+        .genre-card, .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid #00b4d8;
+        }
+        .genre-card {
+            padding: 5px; /* Existing padding for other sides */
+            padding-bottom: 10px; /* Added slight padding at the bottom for premium feel */
+        }
+        .genre-card img {
+            width: 100%; /* Make image take full width of card */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 200px; /* Increased max height for larger images */
+            object-fit: cover; /* Ensure image covers area without distortion */
+            border-radius: 8px; /* Match card border radius */
+        }
+        .genre-card h3, .genre-card p {
+            text-align: center; /* Center-align genre name and description */
+        }
+        .genre-card:hover, .book-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00b4d8, 0 0 30px #7209b7;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #2a2a2a, #7209b7);
+            animation: gradientShift 5s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .btn-glow {
+            background: linear-gradient(90deg, #00b4d8, #7209b7);
+            transition: box-shadow 0.3s ease;
+            display: block; /* Ensure button takes full width */
+            text-align: center; /* Center-align the text inside the button */
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px #00b4d8;
+        }
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+        .card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid #00b4d8;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00b4d8, 0 0 30px #7209b7;
+        }
+        .card i {
+            font-size: 1.5rem;
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+            margin-bottom: 8px;
+        }
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .card span {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .card:hover span {
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+        }
+        /* Horizontal scroll for Featured Books */
+        .book-scroll-container {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            gap: 16px; /* Space between book cards */
+            padding-bottom: 16px; /* Space for scrollbar */
+            scroll-snap-type: x mandatory; /* Snap scrolling for better UX */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        }
+        .book-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .book-scroll-container::-webkit-scrollbar-thumb {
+            background: #00b4d8;
+            border-radius: 4px;
+        }
+        .book-scroll-container::-webkit-scrollbar-track {
+            background: #2a2a2a;
+        }
+        .book-card {
+            flex: 0 0 200px; /* Fixed width for each book card */
+            scroll-snap-align: start; /* Align cards when scrolling */
+            display: flex;
+            flex-direction: column; /* Ensure content stacks vertically */
+            justify-content: space-between; /* Push button to the bottom */
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .book-card a {
+            margin-top: 12px; /* Add space above the button to separate from description */
+        }
+        .view-all-btn {
+            display: block;
+            margin: 16px auto;
+            text-align: center;
+            background: linear-gradient(90deg, #00b4d8, #7209b7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease;
+        }
+        .view-all-btn:hover {
+            box-shadow: 0 0 15px #00b4d8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">7islands Books Library</h1>
+            <div class="space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-4">Welcome to Your Literary Universe</h2>
+            <p class="text-lg mb-6">Dive into a modern world of books with vibrant stories and bold adventures.</p>
+            <form id="search-form" action="search.html" method="GET" class="flex justify-center items-center">
+                <input type="text" id="search" name="query" placeholder="Search by title or author..." class="w-full md:w-1/2 p-3 border border-gray-700 rounded-l-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <button type="submit" class="btn-glow text-white p-3 rounded-r-lg"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Genres -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Explore Genres</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="genre.html?genre=Fiction" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/649yri.jpg" alt="Fiction" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Fiction</h3>
+                <p class="text-sm text-gray-300">Immerse in tales of imagination and drama.</p>
+            </a>
+            <a href="genre.html?genre=Manga" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/07t92q.jpg" alt="Manga" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Manga</h3>
+                <p class="text-sm text-gray-300">Epic art and stories from Japan.</p>
+            </a>
+            <a href="genre.html?genre=Science+Fiction" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/u6uyed.jpg" alt="Science Fiction" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Sci-Fi</h3>
+                <p class="text-sm text-gray-300">Explore futures and galaxies beyond.</p>
+            </a>
+            <a href="genre.html?genre=Novel" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/6axfo2.jpg" alt="Novel" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Novel</h3>
+                <p class="text-sm text-gray-300">Deep, character-driven narratives.</p>
+            </a>
+            <a href="genre.html?genre=Philosophical" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/z281xd.jpg" alt="Philosophical" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Philosophical</h3>
+                <p class="text-sm text-gray-300">Ponder life’s deepest questions.</p>
+            </a>
+            <a href="genre.html?genre=Self+Help" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/8hckk3.jpg" alt="Self-Help" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Self-Help</h3>
+                <p class="text-sm text-gray-300">Grow and transform your life.</p>
+            </a>
+            <a href="genre.html?genre=Non+Fiction" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/ediokh.jpg" alt="Non-Fiction" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Non-Fiction</h3>
+                <p class="text-sm text-gray-300">Facts, true stories and real world insights.</p>
+            </a>
+            <a href="genre.html?genre=Narrative" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/tfs98y.jpg" alt="Narrative" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Narrative</h3>
+                <p class="text-sm text-gray-300">Compelling tales, artfully told.</p>
+            </a>
+            <!-- New Row 1 of Genres -->
+            <a href="genre.html?genre=Mystery" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/xtofhb.jpg" alt="Mystery" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Mystery</h3>
+                <p class="text-sm text-gray-300">Unravel secrets and solve crimes.</p>
+            </a>
+            <a href="genre.html?genre=Thriller" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/wdcgkp.jpg" alt="Thriller" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Thriller</h3>
+                <p class="text-sm text-gray-300">Heart-pounding suspense awaits.</p>
+            </a>
+            <a href="genre.html?genre=Fantasy" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/jp4xwm.jpg" alt="Fantasy" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Fantasy</h3>
+                <p class="text-sm text-gray-300">Step into magical realms.</p>
+            </a>
+            <a href="genre.html?genre=Romance" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/5zsgsz.jpg" alt="Romance" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Romance</h3>
+                <p class="text-sm text-gray-300">Love stories that captivate.</p>
+            </a>
+            <!-- New Row 2 of Genres -->
+            <a href="genre.html?genre=Historical" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/ntnrcj.jpg" alt="Historical" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Historical</h3>
+                <p class="text-sm text-gray-300">Travel back in time.</p>
+            </a>
+            <a href="genre.html?genre=Biography" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/3lugtv.jpg" alt="Biography" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Biography</h3>
+                <p class="text-sm text-gray-300">Lives that inspire.</p>
+            </a>
+            <a href="genre.html?genre=Horror" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/iji2mm.jpg" alt="Horror" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Horror</h3>
+                <p class="text-sm text-gray-300">Chilling tales of terror.</p>
+            </a>
+            <a href="genre.html?genre=Adventure" class="genre-card p-6 rounded-lg">
+                <img src="https://files.catbox.moe/bau0i2.jpg" alt="Adventure" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Adventure</h3>
+                <p class="text-sm text-gray-300">Embark on epic journeys.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Books</h2>
+        <div class="book-scroll-container">
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/gi5mfp.jpg" alt="Dune Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">Dune</h3>
+                <p class="text-sm text-gray-300">Frank Herbert</p>
+                <p class="text-sm">A sci-fi epic of power and destiny.</p>
+                <a href="book.html?title=Dune" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/0iauhx.jpg" alt="The Alchemist Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">The Alchemist</h3>
+                <p class="text-sm text-gray-300">Paulo Coelho</p>
+                <p class="text-sm">A journey to find your personal legend.</p>
+                <a href="book.html?title=The+Alchemist" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/ev920n.jpg" alt="Sapiens Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">Sapiens</h3>
+                <p class="text-sm text-gray-300">Yuval Noah Harari</p>
+                <p class="text-sm">A bold history of humankind.</p>
+                <a href="book.html?title=Sapiens" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <!-- Additional Books -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/92b4h8.jpg" alt="1984 Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">1984</h3>
+                <p class="text-sm text-gray-300">George Orwell</p>
+                <p class="text-sm">A dystopian nightmare unfolds.</p>
+                <a href="book.html?title=1984" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/z3j55a.jpg" alt="The Great Gatsby Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">The Great Gatsby</h3>
+                <p class="text-sm text-gray-300">F. Scott Fitzgerald</p>
+                <p class="text-sm">A tale of wealth and tragedy.</p>
+                <a href="book.html?title=The+Great+Gatsby" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/cmppo5.jpg" alt="To Kill a Mockingbird Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">To Kill a Mockingbird</h3>
+                <p class="text-sm text-gray-300">Harper Lee</p>
+                <p class="text-sm">A story of justice and morality.</p>
+                <a href="book.html?title=To+Kill+a+Mockingbird" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/sb07gw.jpg" alt="The Catcher in the Rye Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">The Catcher in the Rye</h3>
+                <p class="text-sm text-gray-300">J.D. Salinger</p>
+                <p class="text-sm">A journey of youthful rebellion.</p>
+                <a href="book.html?title=The+Catcher+in+the+Rye" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/qbprsu.jpg" alt="Brave New World Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">Brave New World</h3>
+                <p class="text-sm text-gray-300">Aldous Huxley</p>
+                <p class="text-sm">A futuristic society exposed.</p>
+                <a href="book.html?title=Brave+New+World" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/84ejxl.jpg" alt="The Hobbit Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">The Hobbit</h3>
+                <p class="text-sm text-gray-300">J.R.R. Tolkien</p>
+                <p class="text-sm">An unexpected adventure begins.</p>
+                <a href="book.html?title=The+Hobbit" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/nrn2a2.jpg" alt="The Outsiders Cover" class="mb-4">
+                <h3 class="text-xl font-semibold">The Outsiders</h3>
+                <p class="text-sm text-gray-300">S.E. Hinton</p>
+                <p class="text-sm">A story of loyalty and struggle.</p>
+                <a href="book.html?title=The+Outsiders" class="btn-glow text-white p-2 mt-2 rounded-lg text-sm">Read Now</a>
+            </div>
+        </div>
+        <a href="all-featured-books.html" class="view-all-btn">View All</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-black py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="contact-cards">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/917742575985" target="_blank" class="card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <span>+91 7742575985</span>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/7stoical" target="_blank" class="card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <span>@7stoical</span>
+                </a>
+                <!-- Email -->
+                <a href="mailto:nullbasedd@gmail.com" class="card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <span>2k13ig@gmail.com</span>
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/MoggerKing" target="_blank" class="card">
+                    <i class="fab fa-telegram"></i>
+                    <h3>Telegram</h3>
+                    <span>@MoggerKing</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 text-center">
+        <p>© 2025 7islands Books Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle search form submission
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            const query = document.getElementById('search').value.trim();
+            if (!query) {
+                e.preventDefault();
+                alert('Please enter a book title to search!');
+            }
+        });
+        
+    // Basic search placeholder functionality
+    document.getElementById('search').addEventListener('input', function() {
+        console.log('Search query:', this.value);
+        // Add real search functionality later
+    });
+
+    // Smooth scroll for Contact link on the page
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    // Smooth scroll on page load if URL has #contact (e.g., from other pages)
+    window.addEventListener('load', function() {
+        if (window.location.hash === '#contact') {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                setTimeout(() => {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }, 100); // Small delay to ensure page is fully loaded
+            }
+        }
+    });
+</script>
+</body>
+</html>

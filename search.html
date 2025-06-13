@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Classic Books Library</title>
+    <meta name="description" content="Search for books by title or author in our Classic Books Library. Download manga, novels, and more!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8, 0 0 20px #7209b7;
+        }
+        .nav-link {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+        }
+        .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid #00b4d8;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00b4d8, 0 0 30px #7209b7;
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #2a2a2a, #7209b7);
+        }
+        .request-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid #00b4d8;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 12px;
+        }
+        .request-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #00b4d8;
+        }
+        .request-card p {
+            margin-bottom: 1rem;
+        }
+        .request-card .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease;
+        }
+        .request-card .telegram-btn {
+            background: linear-gradient(90deg, #0088cc, #00b4d8);
+        }
+        .request-card .telegram-btn:hover {
+            box-shadow: 0 0 10px #0088cc;
+        }
+        .request-card .instagram-btn {
+            background: linear-gradient(90deg, #833ab4, #fd1d1d);
+        }
+        .request-card .instagram-btn:hover {
+            box-shadow: 0 0 10px #833ab4;
+        }
+        .error-message {
+            color: #ff6b6b;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Classic Books Library</h1>
+            <div class="space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Results Header -->
+    <section class="header-bg py-12 text-center">
+        <div class="container mx-auto">
+            <h2 id="search-title" class="text-3xl font-bold mb-4">Search Results</h2>
+            <p id="search-query" class="text-lg"></p>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="container mx-auto py-12">
+        <div id="search-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Results or not found message will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 text-center">
+        <p>© 2025 Classic Books Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the search query from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = decodeURIComponent(urlParams.get('query') || '').trim().toLowerCase();
+
+        // Update search header and title
+        document.getElementById('search-title').textContent = `Search Results for: ${query || 'No Query'}`;
+        document.getElementById('search-query').textContent = query ? '' : 'Please enter a valid search query.';
+        document.title = `Search: ${query || 'Results'} - Classic Books Library`;
+
+        // Fetch books from books.json and search for partial matches
+        fetch('books.json')
+            .then(response => response.json())
+            .then(books => {
+                const searchResults = document.getElementById('search-results');
+
+                // Find partial matches in title or author (case-insensitive)
+                const matchingBooks = books
+                    .map(book => {
+                        const titleMatch = book.title.toLowerCase().includes(query);
+                        const authorMatch = book.author.toLowerCase().includes(query);
+                        if (titleMatch || authorMatch) {
+                            // Calculate relevance score (higher is better)
+                            const matchString = titleMatch ? book.title.toLowerCase() : book.author.toLowerCase();
+                            const score = query.length / matchString.length; // Shorter matches = higher score
+                            return { book, score };
+                        }
+                        return null;
+                    })
+                    .filter(item => item !== null)
+                    .sort((a, b) => b.score - a.score) // Sort by relevance (descending)
+                    .map(item => item.book);
+
+                if (matchingBooks.length > 0) {
+                    // Render all matching books
+                    matchingBooks.forEach(book => {
+                        // Create book card wrapped in an anchor tag for full card clickability
+                        const bookCard = document.createElement('a');
+                        bookCard.href = `book.html?title=${encodeURIComponent(book.title)}`;
+                        bookCard.className = 'book-card p-4 rounded-lg';
+                        bookCard.style.textDecoration = 'none'; // Remove underline from link
+                        bookCard.style.cursor = 'pointer'; // Show pointer on hover
+                        bookCard.innerHTML = `
+                            <img src="${book.cover}" alt="${book.title} Cover" loading="lazy">
+                            <h3 class="text-xl font-semibold mb-2">${book.title}</h3>
+                            <p class="text-sm text-gray-300 mb-2">${book.author}</p>
+                        `;
+                        searchResults.appendChild(bookCard);
+                    });
+                } else {
+                    // Render not found message and request card
+                    searchResults.className = 'max-w-2xl mx-auto'; // Reset grid for not found
+                    searchResults.innerHTML = `
+                        <p class="text-lg error-message text-center mb-6">Oops! Book Not Found!</p>
+                        <div class="request-card">
+                            <h3 class="text-xl font-semibold mb-4">Can't Find Your Book?</h3>
+                            <p class="text-sm">Let us know, and we'll try to add it to our library!</p>
+                            <div>
+                                <a href="https://t.me/MoggerKing" target="_blank" class="social-btn telegram-btn">
+                                    <i class="fab fa-telegram mr-2"></i>@MoggerKing
+                                </a>
+                                <a href="https://instagram.com/7stoical" target="_blank" class="social-btn instagram-btn">
+                                    <i class="fab fa-instagram mr-2"></i>@7stoical
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Error loading books:', error);
+                const searchResults = document.getElementById('search-results');
+                searchResults.className = 'max-w-2xl mx-auto';
+                searchResults.innerHTML = `
+                    <p class="text-lg error-message text-center mb-6">Error Loading Books!</p>
+                    <div class="request-card">
+                        <h3 class="text-xl font-semibold mb-4">Something Went Wrong</h3>
+                        <p class="text-sm">Please try again later or contact us for assistance.</p>
+                        <div>
+                            <a href="https://t.me/MoggerKing" target="_blank" class="social-btn telegram-btn">
+                                <i class="fab fa-telegram mr-2"></i>@MoggerKing
+                            </a>
+                            <a href="https://instagram.com/7stoical" target="_blank" class="social-btn instagram-btn">
+                                <i class="fab fa-instagram mr-2"></i>@7stoical
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+
+        // Smooth scroll and redirect for Contact link
+        document.querySelector('a[href="index.html#contact"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#contact';
+        });
+    </script>
+</body>
+</html>

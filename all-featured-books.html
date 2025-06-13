@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Featured Books - Classic Books Library</title>
+    <meta name="description" content="Browse all featured books at Classic Books Library. Explore classics, manga, sci-fi, and more!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8, 0 0 20px #7209b7;
+        }
+        .nav-link {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+        }
+        .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid #00b4d8;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto; /* Set height to auto */
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00b4d8, 0 0 30px #7209b7;
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Adjusted max-height to ensure full image visibility */
+            object-fit: contain; /* Changed to contain to show full image */
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .book-card .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .book-card a {
+            margin-top: 12px;
+            display: block;
+            text-align: center;
+        }
+        .btn-glow {
+            background: linear-gradient(90deg, #00b4d8, #7209b7);
+            transition: box-shadow 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px #00b4d8;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #2a2a2a, #7209b7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Classic Books Library</h1>
+            <div class="space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-bg py-12 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">All Featured Books</h2>
+            <p class="text-lg">Discover our curated collection of classics, manga, and more.</p>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="container mx-auto py-8">
+        <div id="featured-books" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Book 1 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/2ivf0x.jpg" alt="Naruto Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Naruto</h3>
+                        <p class="text-sm text-gray-300 mb-2">Masashi Kishimoto</p>
+                        <p class="text-sm mb-4">A young ninja’s journey to become the strongest.</p>
+                    </div>
+                    <a href="book.html?title=Naruto" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 2 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/gi5mfp.jpg" alt="Dune Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Dune</h3>
+                        <p class="text-sm text-gray-300 mb-2">Frank Herbert</p>
+                        <p class="text-sm mb-4">A sci-fi epic of power and destiny.</p>
+                    </div>
+                    <a href="book.html?title=Dune" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 3 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/z3j55a.jpg" alt="The Great Gatsby Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Great Gatsby</h3>
+                        <p class="text-sm text-gray-300 mb-2">F. Scott Fitzgerald</p>
+                        <p class="text-sm mb-4">A tale of wealth, love, and the American Dream.</p>
+                    </div>
+                    <a href="book.html?title=The+Great+Gatsby" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 4 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/pbudrf.jpg" alt="Meditations Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Meditations</h3>
+                        <p class="text-sm text-gray-300 mb-2">Marcus Aurelius</p>
+                        <p class="text-sm mb-4">Reflections on stoic wisdom and duty.</p>
+                    </div>
+                    <a href="book.html?title=Meditations" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 5 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/hxslg2.jpg" alt="The 7 Habits Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The 7 Habits of Highly Effective People</h3>
+                        <p class="text-sm text-gray-300 mb-2">Stephen R. Covey</p>
+                        <p class="text-sm mb-4">Timeless principles for success.</p>
+                    </div>
+                    <a href="book.html?title=The+7+Habits+of+Highly+Effective+People" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 6 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/vcgnjl.jpg" alt="Attack on Titan Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Attack on Titan</h3>
+                        <p class="text-sm text-gray-300 mb-2">Hajime Isayama</p>
+                        <p class="text-sm mb-4">Humanity’s battle against colossal titans.</p>
+                    </div>
+                    <a href="book.html?title=Attack+on+Titan" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 7 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/hg2ef5.jpg" alt="One Piece Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">One Piece</h3>
+                        <p class="text-sm text-gray-300 mb-2">Eiichiro Oda</p>
+                        <p class="text-sm mb-4">A pirate’s quest for the ultimate treasure.</p>
+                    </div>
+                    <a href="book.html?title=One+Piece" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 8 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/j5vb0h.jpg" alt="Death Note Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Death Note</h3>
+                        <p class="text-sm text-gray-300 mb-2">Tsugumi Ohba</p>
+                        <p class="text-sm mb-4">A genius battles with a deadly notebook.</p>
+                    </div>
+                    <a href="book.html?title=Death+Note" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 9 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/0mye3w.jpg" alt="Fullmetal Alchemist Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Fullmetal Alchemist</h3>
+                        <p class="text-sm text-gray-300 mb-2">Hiromu Arakawa</p>
+                        <p class="text-sm mb-4">Brothers seek the philosopher’s stone.</p>
+                    </div>
+                    <a href="book.html?title=Fullmetal+Alchemist" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 10 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/dit31q.jpg" alt="Dragon Ball Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Dragon Ball</h3>
+                        <p class="text-sm text-gray-300 mb-2">Akira Toriyama</p>
+                        <p class="text-sm mb-4">A warrior’s epic quest for power.</p>
+                    </div>
+                    <a href="book.html?title=Dragon+Ball" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 11 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/qaewtu.jpg" alt="Jujutsu Kaisen Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Jujutsu Kaisen</h3>
+                        <p class="text-sm text-gray-300 mb-2">Gege Akutami</p>
+                        <p class="text-sm mb-4">A teen battles curses with dark power.</p>
+                    </div>
+                    <a href="book.html?title=Jujutsu+Kaisen" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 12 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/qwj9k8.jpg" alt="Demon Slayer Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Demon Slayer</h3>
+                        <p class="text-sm text-gray-300 mb-2">Koyoharu Gotouge</p>
+                        <p class="text-sm mb-4">A boy fights demons to save his sister.</p>
+                    </div>
+                    <a href="book.html?title=Demon+Slayer" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 13 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/luuwbm.jpg" alt="My Hero Academia Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">My Hero Academia</h3>
+                        <p class="text-sm text-gray-300 mb-2">Kohei Horikoshi</p>
+                        <p class="text-sm mb-4">A quirkless boy rises to heroism.</p>
+                    </div>
+                    <a href="book.html?title=My+Hero+Academia" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 14 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/92b4h8.jpg" alt="1984 Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">1984</h3>
+                        <p class="text-sm text-gray-300 mb-2">George Orwell</p>
+                        <p class="text-sm mb-4">A dystopian nightmare of surveillance.</p>
+                    </div>
+                    <a href="book.html?title=1984" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 15 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/3xrh5c.jpg" alt="Pride and Prejudice Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Pride and Prejudice</h3>
+                        <p class="text-sm text-gray-300 mb-2">Jane Austen</p>
+                        <p class="text-sm mb-4">A classic romance with wit and commentary.</p>
+                    </div>
+                    <a href="book.html?title=Pride+and+Prejudice" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 16 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/cmppo5.jpg" alt="To Kill a Mockingbird Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">To Kill a Mockingbird</h3>
+                        <p class="text-sm text-gray-300 mb-2">Harper Lee</p>
+                        <p class="text-sm mb-4">A powerful story of justice and morality.</p>
+                    </div>
+                    <a href="book.html?title=To+Kill+a+Mockingbird" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 17 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/je1bx7.jpg" alt="The Midnight Library Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Midnight Library</h3>
+                        <p class="text-sm text-gray-300 mb-2">Matt Haig</p>
+                        <p class="text-sm mb-4">A journey through infinite lives and choices.</p>
+                    </div>
+                    <a href="book.html?title=The+Midnight+Library" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 18 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/84ejxl.jpg" alt="The Hobbit Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Hobbit</h3>
+                        <p class="text-sm text-gray-300 mb-2">J.R.R. Tolkien</p>
+                        <p class="text-sm mb-4">An epic adventure with dwarves and wizards.</p>
+                    </div>
+                    <a href="book.html?title=The+Hobbit" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 19 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/je1bx7.jpg" alt="Sapiens Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Sapiens</h3>
+                        <p class="text-sm text-gray-300 mb-2">Yuval Noah Harari</p>
+                        <p class="text-sm mb-4">A brief history of humankind.</p>
+                    </div>
+                    <a href="book.html?title=Sapiens" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 20 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/0iauhx.jpg" alt="The Alchemist Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Alchemist</h3>
+                        <p class="text-sm text-gray-300 mb-2">Paulo Coelho</p>
+                        <p class="text-sm mb-4">A journey to find a hidden treasure.</p>
+                    </div>
+                    <a href="book.html?title=The+Alchemist" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 21 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/qbprsu.jpg" alt="Brave New World Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Brave New World</h3>
+                        <p class="text-sm text-gray-300 mb-2">Aldous Huxley</p>
+                        <p class="text-sm mb-4">A dystopian vision of a controlled society.</p>
+                    </div>
+                    <a href="book.html?title=Brave+New+World" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 22 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/sb07gw.jpg" alt="The Catcher in the Rye Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Catcher in the Rye</h3>
+                        <p class="text-sm text-gray-300 mb-2">J.D. Salinger</p>
+                        <p class="text-sm mb-4">A tale of teenage rebellion and alienation.</p>
+                    </div>
+                    <a href="book.html?title=The+Catcher+in+the+Rye" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+            <!-- Book 23 -->
+            <div class="book-card p-4 rounded-lg">
+                <img src="https://files.catbox.moe/nrn2a2.jpg" alt="The Outsiders Cover" loading="lazy">
+                <div class="content">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Outsiders</h3>
+                        <p class="text-sm text-gray-300 mb-2">S.E. Hinton</p>
+                        <p class="text-sm mb-4">A story of loyalty and rivalry among teens.</p>
+                    </div>
+                    <a href="book.html?title=The+Outsiders" class="btn-glow text-white p-2 rounded-lg text-sm">Read Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-purple-900 text-white p-4 text-center">
+        <p>© 2025 Classic Books Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll and redirect for Contact link
+        document.querySelector('a[href="index.html#contact"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#contact';
+        });
+    </script>
+</body>
+</html>
